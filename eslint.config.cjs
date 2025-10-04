@@ -7,18 +7,9 @@ const unusedImports = require('eslint-plugin-unused-imports');
 
 module.exports = [
   {
-    files: ['**/*.{ts,js}'],
+    files: ['src/**/*.{ts,js,cjs,mjs}'],
     ignores: [
-      'node_modules',
-      'dist',
-      'build',
-      'build.js',
-      '.yarn',
-      'yarn.lock',
-      '*.json',
-      '*.config.js',
-      '*.config.cjs',
-      '*.md',
+        '**/node_modules',
     ],
     languageOptions: {
       parser: tsParser,
@@ -34,10 +25,7 @@ module.exports = [
       'unused-imports': unusedImports,
     },
     rules: {
-      // 🔹 Auto-remove unused imports (takes priority over @typescript-eslint/no-unused-vars)
       'unused-imports/no-unused-imports': 'error',
-
-      // 🔹 Warn on unused vars (ignore _var, _args) - replaces @typescript-eslint/no-unused-vars
       'unused-imports/no-unused-vars': [
         'warn',
         {
@@ -47,11 +35,7 @@ module.exports = [
           argsIgnorePattern: '^_',
         },
       ],
-
-      // TypeScript rules
       '@typescript-eslint/no-explicit-any': 'warn',
-
-      // Import rules (optional but useful)
       'import/order': [
         'error',
         {
@@ -67,12 +51,8 @@ module.exports = [
         },
       ],
       'import/no-duplicates': 'error',
-      'import/no-unresolved': 'off', // TypeScript handles this
-
-      // Prettier integration
+      'import/no-unresolved': 'off',
       'prettier/prettier': 'error',
-
-      // Allow console logs
       'no-console': 'off',
     },
   },
