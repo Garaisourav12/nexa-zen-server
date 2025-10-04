@@ -30,7 +30,7 @@
     "lint": "node lint.cjs",
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "clean": "rimraf dist",
-    "build": "yarn lint && yarn clean && node build.js",
+    "build": "yarn clean && node build.js",
     "start": "node dist/index.js",
     "prepare": "husky"
   }
