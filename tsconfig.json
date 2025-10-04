@@ -1,0 +1,30 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ES2022", // Modern JS target
+    "module": "NodeNext", // Node.js ES module support
+    "moduleResolution": "NodeNext",
+    "outDir": "dist", // Compiled files output
+    "rootDir": "src", // Source files root
+    "strict": true, // Enable all strict type-checking
+    "noImplicitAny": true, // No implicit 'any'
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true, // For CommonJS imports
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true, // Skip type check for node_modules
+    "resolveJsonModule": true, // Import JSON files
+    "allowJs": false, // Only allow TS files
+    "sourceMap": true, // Generate source maps
+    "incremental": true, // Enable incremental builds
+    "types": ["node"], // Include node types
+    "lib": ["ES2022"], // JS built-ins
+    "allowSyntheticDefaultImports": true,
+    "removeComments": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

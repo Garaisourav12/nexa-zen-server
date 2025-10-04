@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+build.js
+.yarn
+yarn.lock
+*.json
+*.config.js
+*.config.cjs
+*.md
