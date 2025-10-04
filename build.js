@@ -1,4 +1,5 @@
-import esbuild from "esbuild";
+// build.js (CommonJS)
+const esbuild = require("esbuild");
 
 esbuild
   .build({
